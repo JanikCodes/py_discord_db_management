@@ -1,0 +1,18 @@
+[project]
+name = "py_discord_db_management"
+version = "0.0.1"
+authors = [
+  { name="JanikCodes", email="janiksielaff@gmx.de" },
+]
+description = "A package used to edit/view your database table, columns & data"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/JanikCodes/tarnished_souls"
+"Bug Tracker" = "https://github.com/JanikCodes/tarnished_souls/issues"

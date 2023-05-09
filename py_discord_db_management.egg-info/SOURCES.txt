@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+py_discord_db_management/__init__.py
+py_discord_db_management/dbpyman.py
+py_discord_db_management.egg-info/PKG-INFO
+py_discord_db_management.egg-info/SOURCES.txt
+py_discord_db_management.egg-info/dependency_links.txt
+py_discord_db_management.egg-info/top_level.txt
