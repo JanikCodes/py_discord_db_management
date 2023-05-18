@@ -7,3 +7,6 @@ py_discord_db_management.egg-info/PKG-INFO
 py_discord_db_management.egg-info/SOURCES.txt
 py_discord_db_management.egg-info/dependency_links.txt
 py_discord_db_management.egg-info/top_level.txt
+py_discord_db_management/classes/column.py
+py_discord_db_management/classes/database.py
+py_discord_db_management/classes/table.py
