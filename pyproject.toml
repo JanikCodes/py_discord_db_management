@@ -1,6 +1,6 @@
 [project]
 name = "py_discord_db_management"
-version = "0.0.45"
+version = "0.0.451"
 authors = [
   { name="JanikCodes", email="janiksielaff@gmx.de" },
 ]

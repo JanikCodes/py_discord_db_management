@@ -25,3 +25,13 @@ class create_db_management_view(discord.ui.View):
 class TableButton(discord.ui.Button):
     def __init__(self, table):
         super().__init__(label=table.table_name)
+        self.table = table
+    async def callback(self, interaction: discord.Interaction):
+        await interaction.response.defer()
+
+        columns_text = str()
+
+        for column in self.table.columns:
+            columns_text += f"{column.field} ({column.type}) Nullable: {column.null} Key: {column.key} Default: {column.default} Extra: {column.extra}\n"
+
+        await interaction.followup.send(columns_text)
