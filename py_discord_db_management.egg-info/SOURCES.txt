@@ -10,3 +10,8 @@ py_discord_db_management.egg-info/top_level.txt
 py_discord_db_management/classes/column.py
 py_discord_db_management/classes/database.py
 py_discord_db_management/classes/table.py
+py_discord_db_management/classes/buttons/add_data_button.py
+py_discord_db_management/classes/buttons/return_to_overview_button.py
+py_discord_db_management/classes/buttons/table_overview_button.py
+py_discord_db_management/classes/views/table_categories.py
+py_discord_db_management/classes/views/table_overview.py

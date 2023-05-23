@@ -1,4 +1,5 @@
 import mysql.connector
+
 from py_discord_db_management.classes.table import Table
 
 

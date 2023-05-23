@@ -1,12 +1,12 @@
 [project]
 name = "py_discord_db_management"
-version = "0.0.451"
+version = "0.0.4536"
 authors = [
   { name="JanikCodes", email="janiksielaff@gmx.de" },
 ]
 description = "A package used to edit/view your database table, columns & data"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
