@@ -58,11 +58,11 @@ class TableAddDataView(discord.ui.View):
                 # style=discord.TextStyle.paragraph
                 column_counter = self.column_index
 
+                # create individual input based on column
                 for index, column in itertools.islice(enumerate(self.columns[self.column_index:], start=self.column_index), 5):
                     # increase counter
                     column_counter += 1
-                    print(column.get_null())
-                    self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=False))
+                    self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=not column.get_nullable()))
 
                 self.column_index = column_counter
 
