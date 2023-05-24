@@ -27,7 +27,7 @@ class TableCategoryView(discord.ui.View):
             await interaction.response.defer()
 
             # we create an empty array with the size of the table columns count
-            empty_tb_data = [None] * (len(self.table.get_columns()))
+            columns = self.table.get_columns()
 
             from py_discord_db_management.views.table_add_data_view import TableAddDataView
-            await interaction.message.edit(view=TableAddDataView(database=self.database, table=self.table, tb_data=empty_tb_data))
+            await interaction.message.edit(view=TableAddDataView(database=self.database, table=self.table, columns=columns))
