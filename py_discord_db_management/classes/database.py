@@ -41,3 +41,20 @@ class Database:
                 tables.append(Table(self, row[0]))
 
         return tables
+
+    def add_data_to_table(self, table, tb_data):
+
+        val_str = str()
+
+        for index, data in enumerate(tb_data):
+            if not index == len(tb_data):
+                val_str += "%s, "
+            else:
+                # last element
+                val_str += "%s"
+
+        print(f'INSERT INTO {table.get_table_name()} VALUES({val_str});')
+
+        sql = f'INSERT INTO {table.get_table_name()} VALUES({val_str});'
+        self.cursor.execute(sql, tb_data)
+        self.mydb.commit()
