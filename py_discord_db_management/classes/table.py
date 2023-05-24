@@ -3,10 +3,14 @@ from py_discord_db_management.classes.column import Column
 
 class Table:
     def __init__(self, database, table_name):
-        self.table_name = table_name
+        self.__table_name = table_name
+        self.__columns = self.get_columns_from_table(database, table_name)
 
-        self.columns = self.get_columns_from_table(database, table_name)
+    def get_table_name(self):
+        return self.__table_name
 
+    def get_columns(self):
+        return self.__columns
 
     def get_columns_from_table(self, database, table_name):
         columns = []
