@@ -1,10 +1,10 @@
 [project]
-name = "py_discord_db_management"
-version = "0.0.4555"
+name = "dbpyman"
+version = "0.1"
 authors = [
   { name="JanikCodes", email="janiksielaff@gmx.de" },
 ]
-description = "A package used to edit/view your database table, columns & data"
+description = "A package used to modify & view your MySQL database data dynamically"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/JanikCodes/tarnished_souls"
-"Bug Tracker" = "https://github.com/JanikCodes/tarnished_souls/issues"
+"Homepage" = "https://github.com/JanikCodes/py_discord_db_management"
+"Bug Tracker" = "https://github.com/JanikCodes/py_discord_db_management/issues"
