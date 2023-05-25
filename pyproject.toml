@@ -1,6 +1,6 @@
 [project]
 name = "dbpyman"
-version = "0.1"
+version = "0.1.21"
 authors = [
   { name="JanikCodes", email="janiksielaff@gmx.de" },
 ]
