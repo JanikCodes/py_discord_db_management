@@ -62,8 +62,7 @@ class TableAddDataView(discord.ui.View):
                 for index, column in itertools.islice(enumerate(self.columns[self.column_index:], start=self.column_index), 5):
                     # increase counter
                     column_counter += 1
-                    if not column.get_hidden():
-                        self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=not column.get_nullable(), placeholder=str(column.get_default()) ))
+                    self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=not column.get_nullable(), placeholder=str(column.get_default()) ))
 
                 self.column_index = column_counter
 
