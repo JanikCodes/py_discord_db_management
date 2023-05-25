@@ -62,7 +62,7 @@ class TableAddDataView(discord.ui.View):
                 for index, column in itertools.islice(enumerate(self.columns[self.column_index:], start=self.column_index), 5):
                     # increase counter
                     column_counter += 1
-                    self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=not column.get_nullable()))
+                    self.add_item(discord.ui.TextInput(label=f"{column.get_field()}", required=not column.get_nullable(), placeholder=str(column.get_default()) ))
 
                 self.column_index = column_counter
 
@@ -71,6 +71,8 @@ class TableAddDataView(discord.ui.View):
 
                 # retrieve the data from each input
                 for index, value in enumerate(self.children):
-                    self.columns[self.start_column_index + index].set_attached_data(str(value))
+                    column_val = None if not str(value) else str(value)
+
+                    self.columns[self.start_column_index + index].set_attached_data(column_val)
 
                 await interaction.message.edit(view=TableAddDataView(database=self.database, table=self.table, columns=self.columns, column_index=self.column_index))

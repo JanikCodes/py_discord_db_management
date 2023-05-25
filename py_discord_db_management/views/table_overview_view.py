@@ -5,7 +5,9 @@ class TableOverviewView(discord.ui.View):
         super().__init__()
 
         for table in database.tables:
-           self.add_item(self.TableOverviewButton(database=database, table=table))
+            # hide hidden tables from view
+            if not table.get_hidden():
+                self.add_item(self.TableOverviewButton(database=database, table=table))
 
     class TableOverviewButton(discord.ui.Button):
         def __init__(self, database, table):

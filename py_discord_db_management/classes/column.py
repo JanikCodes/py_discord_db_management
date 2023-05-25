@@ -14,9 +14,12 @@ class Column:
     def set_attached_data(self, attached_data):
         # value is empty
         if not attached_data:
-            self.__attached_data = str(self.__default) if self.__default else 'NULL'
+            self.__attached_data = self.__default
         else:
             self.__attached_data = attached_data
+
+    def set_default(self, new_default):
+        self.__default = new_default
 
     def get_attached_data(self):
         return self.__attached_data
@@ -28,11 +31,17 @@ class Column:
         return self.__type
 
     def get_nullable(self):
-        # allow to force a primary key
+        # allow to force a custom primary key
         if self.__extra == 'auto_increment':
             return True
 
-        return True if self.__null == 'YES' else False
+        if self.__null == 'YES':
+            return True
+
+        if self.__null == 'NO':
+            if self.__default or self.__default == 0:
+                return True
+            return False
 
     def get_key(self):
         return self.__key
