@@ -47,6 +47,19 @@ class Database:
                 return
 
         warnings.warn(f"Couldn't find table with name: {table_name}")
+
+    def set_column_hidden(self, table_name, column_name):
+        for table in self.tables:
+            if table.get_table_name().lower() == table_name.lower():
+                # we found the table
+                for column in table.get_columns():
+                    if column.get_field().lower() == column_name.lower():
+                        # we found the column
+                        column.set_hidden(True)
+                        return
+
+                warnings.warn(f"Couldn't find column with name: {column_name}")
+        warnings.warn(f"Couldn't find table with name: {table_name}")
     def set_column_default_value(self, table_name, column_name, value):
         for table in self.tables:
             if table.get_table_name().lower() == table_name.lower():

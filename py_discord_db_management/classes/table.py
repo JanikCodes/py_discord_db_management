@@ -5,6 +5,7 @@ class Table:
     def __init__(self, database, table_name):
         self.__table_name = table_name
         self.__columns = self.get_columns_from_table(database, table_name)
+
         self.__hidden = False
 
     def set_hidden(self, new_visibility):

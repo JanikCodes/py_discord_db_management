@@ -10,6 +10,13 @@ class Column:
 
         # variable that is used to attach values to that specific column
         self.__attached_data = None
+        self.__hidden = False
+
+    def get_hidden(self):
+        return self.__hidden
+
+    def set_hidden(self, new_visibility):
+        self.__hidden = new_visibility
 
     def set_attached_data(self, attached_data):
         # value is empty
