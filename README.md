@@ -3,6 +3,11 @@ This package is used to dynamically **add new data** to your existing Mysql tabl
 You're also able to **delete** or **view** data.<br>
 It'll return you an embed & a view for you to send back.
 
+### Built With
+[![Python][python]][python-url]
+[![MySQL][mysql]][mysql-url]
+![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+
 ### How to get started
 1. Install the package
 ```py
@@ -71,11 +76,6 @@ embed, view = dbpyman.create_db_management(database)
 ### Contribute
 Feel free to contribute to the project, it's open source.<br>
 It's probably possible to *not only* support MySQL and work with inheritance to allow other database types.
-
-### Built With
-[![Python][python]][python-url]
-[![MySQL][mysql]][mysql-url]
-![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
