@@ -71,5 +71,10 @@ class Database:
         self.cursor.execute(sql, column_data)
         self.mydb.commit()
 
+    def remove_data_from_table(self, table, primary_key):
+        sql = f'DELETE FROM {table.get_table_name()} WHERE {table.get_primary_column().get_field()} = %s'
+        self.cursor.execute(sql, (primary_key, ))
+        self.mydb.commit()
+
     def get_charset(self):
         return self.charset
