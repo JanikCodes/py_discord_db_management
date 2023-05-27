@@ -11,7 +11,7 @@ It'll return you an embed & a view for you to send back.
 ### How to get started
 1. Install the package
 ```py
-pip install dbpyman
+pip install dbpyman==0.1.5
 ```
 2. Create a new command for your discord Bot and create a `database` object inside that.
 ```py
