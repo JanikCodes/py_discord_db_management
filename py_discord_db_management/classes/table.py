@@ -19,6 +19,13 @@ class Table:
     def get_columns(self):
         return self.__columns
 
+    def get_visible_columns(self):
+        visible_columns = []
+        for column in self.__columns:
+            if not column.get_hidden():
+                visible_columns.append(column)
+        return visible_columns
+
     def get_primary_column(self):
         # return the first primary column that we find
         for column in self.__columns:

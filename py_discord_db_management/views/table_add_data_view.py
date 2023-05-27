@@ -12,7 +12,7 @@ class TableAddDataView(discord.ui.View):
         self.add_item(self.ReturnButton(database, table))
 
         # Check if we can even add more data
-        if not self.column_index >= len(table.get_columns()):
+        if not self.column_index >= len(table.get_visible_columns()):
 
             if column_index == 0:
                 self.add_item(self.ContinueButton("Start", database, table, columns, column_index))
@@ -73,6 +73,8 @@ class TableAddDataView(discord.ui.View):
                 for index, value in enumerate(self.children):
                     column_val = None if not str(value) else str(value)
 
-                    self.columns[self.start_column_index + index].set_attached_data(column_val)
+                    for column in self.columns:
+                        if column.get_field().lower() == value.label.lower():
+                            column.set_attached_data(column_val)
 
                 await interaction.message.edit(view=TableAddDataView(database=self.database, table=self.table, columns=self.columns, column_index=self.column_index))

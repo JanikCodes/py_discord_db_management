@@ -10,6 +10,7 @@ class Column:
 
         # variable that is used to attach values to that specific column
         self.__attached_data = None
+        self.__hidden = False
 
     def set_attached_data(self, attached_data):
         # value is empty
@@ -21,11 +22,17 @@ class Column:
     def set_default(self, new_default):
         self.__default = new_default
 
+    def set_hidden(self, value):
+        self.__hidden = value
+
     def get_attached_data(self):
         return self.__attached_data
 
     def get_field(self):
         return self.__field
+
+    def get_hidden(self):
+        return self.__hidden
 
     def get_type(self):
         return self.__type
