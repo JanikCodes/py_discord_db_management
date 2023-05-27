@@ -62,6 +62,18 @@ database.set_table_hidden('MySecondTableName')
 embed, view = dbpyman.create_db_management(database)
 ```
 
+#### Hide certain columns from a table
+In general the framework will generate all columns for the modal when adding data however<br>
+You can prevent that by using
+
+```py
+database = Database(...)
+database.set_column_hidden('MyTableName', 'MyColumnName')
+database.set_column_hidden('MySecondTableName', 'MySecondColumnName')
+
+embed, view = dbpyman.create_db_management(database)
+```
+
 #### Set a default value for a column
 This will set a **default value** for that specific column. When **adding data** to a table, you'll see the **default value** as the input preview.
 This will also allow you to *skip* the insertion of those specific column input fields and simply use the assigned **default value** when that input field is empty ( even if the table is marked as `NOT NULL` ).
